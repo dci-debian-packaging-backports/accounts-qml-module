@@ -7,13 +7,13 @@ Build-Depends: dbus-test-runner,
                libaccounts-qt5-dev (>= 1.10),
                libsignon-qt5-dev (>= 8.50),
                pkg-config,
-               qtdeclarative5-dev,
-               qttools5-dev-tools,
-               qtdeclarative5-dev-tools,
                qml-module-qtquick2,
-               qtchooser,
                qt5-qmake,
-               xvfb,
+               qtchooser,
+               qtdeclarative5-dev,
+               qtdeclarative5-dev-tools,
+               qttools5-dev-tools,
+               xvfb
 Standards-Version: 3.9.3
 Homepage: https://launchpad.net/accounts-qml-module
 # If you aren't a member of ~online-accounts but need to upload packaging changes,
@@ -23,9 +23,7 @@ Vcs-Bzr: https://code.launchpad.net/~online-accounts/accounts-qml-module/trunk
 Package: qml-module-ubuntu-onlineaccounts
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends},
-         ${shlibs:Depends},
-         qtdeclarative5-qtquick2-plugin,
+Depends: qtdeclarative5-qtquick2-plugin, ${misc:Depends}, ${shlibs:Depends}
 Breaks: qtdeclarative5-accounts-plugin (<= 0.5+14.10.20141006-0ubuntu1)
 Replaces: qtdeclarative5-accounts-plugin (<= 0.5+14.10.20141006-0ubuntu1)
 Description: Expose the Online Accounts API to QML applications
@@ -36,8 +34,7 @@ Package: qtdeclarative5-accounts-plugin
 Architecture: any
 Section: oldlibs
 Multi-Arch: same
-Depends: ${misc:Depends},
-         qml-module-ubuntu-onlineaccounts,
+Depends: qml-module-ubuntu-onlineaccounts, ${misc:Depends}
 Description: transitional dummy package for Online Accounts QML clients
  This module provides access to the Online Accounts framework from QML
  applications.
@@ -46,10 +43,9 @@ Package: accounts-qml-module-doc
 Section: doc
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}
 Description: Online Accounts QML - documentation
  This module provides access to the Online Accounts framework from QML
  applications.
  .
  This package contains developer documentation.
-
