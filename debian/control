@@ -23,7 +23,7 @@ Vcs-Bzr: https://code.launchpad.net/~online-accounts/accounts-qml-module/trunk
 Package: qml-module-ubuntu-onlineaccounts
 Architecture: any
 Multi-Arch: same
-Depends: qtdeclarative5-qtquick2-plugin, ${misc:Depends}, ${shlibs:Depends}
+Depends: qml-module-qtquick2, ${misc:Depends}, ${shlibs:Depends}
 Breaks: qtdeclarative5-accounts-plugin (<= 0.5+14.10.20141006-0ubuntu1)
 Replaces: qtdeclarative5-accounts-plugin (<= 0.5+14.10.20141006-0ubuntu1)
 Description: Expose the Online Accounts API to QML applications
